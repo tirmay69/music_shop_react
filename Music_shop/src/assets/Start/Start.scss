@@ -1,0 +1,60 @@
+@import "/src/root.scss";
+.background {
+  background-image: url(/src/assets/img/background.png);
+
+  background-size: cover;
+
+  @include pc {
+    padding-bottom: rem(150px);
+  }
+}
+
+.deletePadding {
+  padding-bottom: 0;
+}
+.Start {
+  display: flex;
+  justify-content: flex-start;
+
+  @include pc {
+    justify-content: space-between;
+  }
+  &-imgWrapper {
+    img {
+      margin-left: 14px;
+      width: 40%;
+      @include pc {
+        margin: unset;
+      }
+    }
+    @include pc {
+      width: rem(452px);
+      text-align: unset;
+      img {
+        width: 100%;
+      }
+    }
+    @include tablet {
+      text-align: center;
+    }
+  }
+  &-itemCounter {
+    display: flex;
+    position: absolute;
+    right: 0;
+    @include shadow;
+
+    border-radius: 0 0 15px 15px;
+    background-color: white;
+    font-size: 12px;
+    img {
+      width: 15%;
+    }
+    @include pc {
+      position: unset;
+      display: flex;
+      font-size: rem(24px);
+      height: max-content;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "/src/root.scss";
+.WrapperSale {
+  position: relative;
+  z-index: 2;
+}
+
+
+.Sale {
+  @include shadow;
+  border: solid;
+  border-color: #c0c0c0;
+  border-width: 2px;
+  background-color: white;
+  padding: rem(45px) rem(67px);
+  margin-top: 15px;
+  @include pc {
+    margin: unset;
+  }
+  h1 {
+    @include h1;
+  }
+}
+.WrapperCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include pc {
+    justify-content: space-between;
+  }
+}

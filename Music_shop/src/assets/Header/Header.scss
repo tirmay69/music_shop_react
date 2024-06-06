@@ -1,0 +1,62 @@
+@import "/src/root.scss";
+.Header {
+  @include shadow;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  @include pc {
+    padding: 0 rem(196px);
+  }
+  &-logo {
+    display: block;
+    width: 60px;
+    @include pc {
+      width: rem(200px);
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &-list {
+    margin: 0;
+    padding: 5px 0;
+    display: flex;
+
+    list-style-type: none;
+    justify-content: center;
+
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 0%;
+
+    @include pc {
+      font-size: rem(24px);
+      justify-content: flex-end;
+      padding: rem(20px) 0;
+    }
+    &-point {
+      text-transform: lowercase;
+      text-align: center;
+      margin-right: 10px;
+      @include pc {
+        margin-right: rem(44px);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+      & a {
+        text-decoration: none;
+
+        &:hover {
+          @include pc {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}

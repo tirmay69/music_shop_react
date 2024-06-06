@@ -1,0 +1,49 @@
+@use "sass:math";
+@mixin tablet {
+  @media (min-width: 599px) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+@mixin button {
+}
+
+@mixin Helvet {
+  @font-face {
+    font-family: "Helvetica Neue Cyr Thin";
+    src: url("./assets/fonts/helvet/HelveticaNeueCyr-Thin.eot");
+    src: url("./assets/fonts/helvet/HelveticaNeueCyr-Thin.eot?#iefix")
+        format("embedded-opentype"),
+      url("./assets/fonts/helvet/HelveticaNeueCyr-Thin.woff") format("woff"),
+      url("./assets/fonts/helvet/HelveticaNeueCyr-Thin.ttf") format("truetype");
+
+    font-weight: normal;
+    font-style: normal;
+  }
+  font-family: "Helvetica Neue Cyr Thin";
+}
+@mixin shadow {
+  box-shadow: 0px 7px 35px rgba(0, 0, 0, 0.2);
+}
+
+// @function rem($size) {
+//   @return math.div($size, 16px) * 1em;
+// }
+@function rem($px-vw, $base-vw: 1920px) {
+  @return ($px-vw * 100vw) / $base-vw;
+}
+
+@mixin h1 {
+  @include Helvet;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 100;
+  letter-spacing: 0;
+  @include pc {
+    font-size: rem(64px);
+  }
+}

@@ -1,0 +1,64 @@
+@import "/src/root.scss";
+.WrapperStartSale {
+  position: relative;
+  z-index: 2;
+  &:before {
+    content: "";
+    z-index: -1;
+    background-image: url(/src/assets/img/circle.png);
+    background-size: cover;
+    position: absolute;
+    visibility: hidden;
+    @include pc {
+      visibility: visible;
+      top: rem(100px);
+      left: rem(120px);
+      width: rem(800px);
+      height: rem(800px);
+    }
+  }
+}
+.StartSale {
+  @include Helvet;
+  @include shadow;
+  padding: 15px 25px 20px 25px;
+  margin: 0 5px;
+
+  background-color: white;
+  border-radius: 15px;
+  text-wrap: wrap;
+
+  @include pc {
+    padding: rem(20px) rem(35px) rem(40px) rem(35px);
+    width: 30%;
+  }
+
+  .btn-sale {
+    text-align: end;
+    margin-top: 50px;
+    @include pc {
+      margin-top: unset;
+    }
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      background-color: #ffd600;
+      padding: 15px;
+      border-radius: 50px 0 0 0;
+      @include pc {
+        font-size: rem(39px);
+      }
+    }
+  }
+
+  p {
+    @include pc {
+      font-size: rem(30px);
+    }
+  }
+  h1 {
+    @include pc {
+      font-size: rem(50px);
+    }
+  }
+}

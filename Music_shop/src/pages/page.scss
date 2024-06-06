@@ -1,0 +1,91 @@
+@import "/src/root.scss";
+.Wrapper {
+}
+.Block {
+  @include shadow;
+  padding: rem(15px);
+  display: flex;
+  flex-direction: column;
+  padding-top: rem(400px);
+  padding-bottom: rem(50px);
+  margin-bottom: rem(50px);
+  //   justify-content: center;
+  p {
+    line-height: 17px;
+    letter-spacing: 2px;
+  }
+  img {
+    position: absolute;
+    left: 0;
+    top: rem(1100px);
+    width: 99vw;
+  }
+  li {
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: #000;
+    font-size: rem(24px);
+  }
+  ul {
+    p {
+      font-size: rem(18px);
+      line-height: 14px;
+      letter-spacing: 2px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  &-Wrapper {
+    display: flex;
+    justify-content: space-between;
+    .Block-delivery,
+    .Block-pay {
+      @include shadow;
+      width: 50%;
+      padding: rem(15px);
+      border-radius: 15px;
+    }
+    .Block-delivery {
+      margin-left: rem(15px);
+    }
+    .Block-description {
+      @include shadow;
+      padding: rem(15px);
+      border-radius: 15px;
+    }
+  }
+
+  &-description-contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 rem(15px);
+  }
+  &-schedule,
+  &-locate {
+    margin-right: rem(35px);
+  }
+
+  &-map {
+    width: 40%;
+    img {
+      position: unset;
+      width: 100%;
+    }
+  }
+  &-icon-info {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      width: rem(25px);
+      img {
+        position: unset;
+        width: 100%;
+      }
+      margin-right: rem(15px);
+    }
+  }
+}
